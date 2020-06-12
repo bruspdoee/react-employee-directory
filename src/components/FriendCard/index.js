@@ -16,6 +16,9 @@ function FriendCard(props) {
             <strong>Occupation:</strong> {props.occupation}
           </li>
           <li>
+            <strong>Department:</strong> {props.department}
+          </li>
+          <li>
             <strong>Location:</strong> {props.location}
           </li>
         </ul>
