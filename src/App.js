@@ -1,34 +1,19 @@
-import React, { Component } from "react";
-import FriendCard from "./components/FriendCard";
+import React from "react";
+import Main from "./components/Main";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
-import friends from "./employees.json";
+import Header from "./components/Header";
 
-class App extends Component {
-  // Setting this.state.friends to the friends json array
-  state = {
-    friends,
-  };
+import "./App.css";
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
-  render() {
-    return (
+function App() {
+  return (
+    <div className="App">
       <Wrapper>
-        <Title>Marvel Universe Team </Title>
-        {this.state.friends.map((friend) => (
-          <FriendCard
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-            department={friend.department}
-            occupation={friend.occupation}
-            location={friend.location}
-          />
-        ))}
+        <Header />
+        <Main />
       </Wrapper>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;
